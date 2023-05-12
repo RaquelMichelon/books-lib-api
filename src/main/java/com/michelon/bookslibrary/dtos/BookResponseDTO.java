@@ -1,4 +1,4 @@
-package com.michelon.bookslibrary;
+package com.michelon.bookslibrary.dtos;
 
 import com.michelon.bookslibrary.entities.Book;
 import lombok.*;
