@@ -25,7 +25,7 @@ public class Book {
     private String title;
     @Column(name = "book_year")
     private Integer year;
-    private String gender;
+    private String genre;
     private String platforms;
     private Double score;
     private String imgUrl;
