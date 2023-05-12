@@ -29,7 +29,9 @@ public class Book {
     private String platforms;
     private Double score;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT") //because String is mapped as a varchar(255) and we need more than just that
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     @Override
