@@ -24,6 +24,14 @@ public class BookListController {
     @Autowired
     private BookListService bookListService;
 
+    @Autowired
+    private BookService bookService;
+
+    @GetMapping(value = "/{listId}/games")
+    public List<BookResponseDTO> findByList(@PathVariable Long listId) {
+        return bookService.findByList(listId);
+    }
+
     @GetMapping
     public List<BookListDTO> findAll() {
         return bookListService.findAll();

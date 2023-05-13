@@ -3,6 +3,7 @@ package com.michelon.bookslibrary.services;
 import com.michelon.bookslibrary.dtos.BookDTO;
 import com.michelon.bookslibrary.dtos.BookResponseDTO;
 import com.michelon.bookslibrary.entities.Book;
+import com.michelon.bookslibrary.projections.BookMinProjection;
 import com.michelon.bookslibrary.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,11 @@ public class BookService {
     @Transactional(readOnly = true) //announce that will not write on the db, so the transaction tends to be faster
     public List<BookResponseDTO> findAll(){
         return bookRepository.findAll().stream().map(BookResponseDTO::new).toList();
+    }
+
+    @Transactional(readOnly = true) //announce that will not write on the db, so the transaction tends to be faster
+    public List<BookResponseDTO> findByList(Long listId){
+        return bookRepository.searchByList(listId).stream().map(BookResponseDTO::new).toList();
     }
 }
 

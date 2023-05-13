@@ -1,6 +1,7 @@
 package com.michelon.bookslibrary.dtos;
 
 import com.michelon.bookslibrary.entities.Book;
+import com.michelon.bookslibrary.projections.BookMinProjection;
 import lombok.*;
 
 /**
@@ -25,6 +26,14 @@ public class BookResponseDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public BookResponseDTO(BookMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 }
 
