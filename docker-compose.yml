@@ -48,3 +48,4 @@ networks:
 #maintainance database: mydatabase (is on the env)
 #username: postgres
 #pass: 1234567
+# create database name: booklist

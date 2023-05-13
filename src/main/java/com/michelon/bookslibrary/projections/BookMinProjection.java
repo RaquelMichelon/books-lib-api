@@ -9,7 +9,7 @@ public interface BookMinProjection {
     //create get methods that are corresponded with my query
     Long getId();
     String getTitle();
-    Integer getYear();
+    Integer getBookYear();
     String getImgUrl();
     String getShortDescription();
     Integer getPosition();

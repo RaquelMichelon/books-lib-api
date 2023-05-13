@@ -31,7 +31,7 @@ public class BookResponseDTO {
     public BookResponseDTO(BookMinProjection projection) {
         id = projection.getId();
         title = projection.getTitle();
-        year = projection.getYear();
+        year = projection.getBookYear();
         imgUrl = projection.getImgUrl();
         shortDescription = projection.getShortDescription();
     }
